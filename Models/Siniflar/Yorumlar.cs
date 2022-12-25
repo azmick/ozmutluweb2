@@ -9,6 +9,6 @@ namespace ozmutluweb.Models.Siniflar
         public String KullaniciAdi { get; set; }
         public String Mail { get; set; } //Burada amac veri toplamak. Kullaniciların mailine yeni bir bilidirim atarken bu verilere göre islem yapabiliriz.
         public String Yorum { get; set; }
-        public int UrunlerID { get; set;} //Yapilan yorumun hangi ürüne yapildi tutmak icin.
+        public Urunler Urunler { get; set; } //Yapilan yorumun hangi ürüne yapildi tutmak icin.
     }
 }
