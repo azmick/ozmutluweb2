@@ -1,15 +1,34 @@
-﻿using System.Data.Entity;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace ozmutluweb.Models.Siniflar
 {
     public class Context : DbContext //DbContext i context sınıfından miras aldım
     {
-      public DbSet<Admin> Admins { get; set; } //Hangi sınıfımı kullanmak istediğimi dbset icine yazıyorum.
-      public DbSet<AdresBlog> AdresBlogs { get; set; }
-      public DbSet<Urunler> Urunlers { get; set; }
-      public DbSet<Hakkımızda> Hakkımızdas { get; set; }
-      public DbSet<Iletisim> Iletisims { get; set; }
-      public DbSet<Yorumlar> Yorumlars { get; set; }
+        private readonly IConfiguration _config;
 
+		public Context()
+		{
+		}
+
+		public Context(IConfiguration config)
+        {
+            _config = config;
+        }
+
+        public DbSet<Admin> Admins { get; set; } //Hangi sınıfımı kullanmak istediğimi dbset icine yazıyorum.
+        public DbSet<AdresBlog> AdresBlogs { get; set; }
+        public DbSet<Urunler> Urunlers { get; set; }
+        public DbSet<Hakkımızda> Hakkimizdas { get; set; }
+        public DbSet<Iletisim> Iletisims { get; set; }
+        public DbSet<Yorumlar> Yorumlars { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb; Database=gorkemliDB;Trusted_Connection=True;");
+        }
     }
 }
+
+
+
+
