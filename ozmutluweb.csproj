@@ -7,6 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\web2\about.html" />
+    <None Include="wwwroot\web2\contact.html" />
+    <None Include="wwwroot\web2\css\bootstrap.css" />
+    <None Include="wwwroot\web2\css\style.css" />
+    <None Include="wwwroot\web2\images\avatar.png" />
+    <None Include="wwwroot\web2\images\icon3.png" />
+    <None Include="wwwroot\web2\images\logo.jpg" />
+    <None Include="wwwroot\web2\images\man.jpg" />
+    <None Include="wwwroot\web2\images\more.png" />
+    <None Include="wwwroot\web2\images\post1.jpg" />
+    <None Include="wwwroot\web2\images\post2.jpg" />
+    <None Include="wwwroot\web2\images\post3.jpg" />
+    <None Include="wwwroot\web2\images\search.png" />
+    <None Include="wwwroot\web2\index.html" />
+    <None Include="wwwroot\web2\js\easing.js" />
+    <None Include="wwwroot\web2\js\jquery.min.js" />
+    <None Include="wwwroot\web2\js\move-top.js" />
+    <None Include="wwwroot\web2\single.html" />
+    <None Include="wwwroot\web2\w3layouts-License.txt" />
     <None Include="wwwroot\web\about.html" />
     <None Include="wwwroot\web\contact.html" />
     <None Include="wwwroot\web\css\slider.css" />

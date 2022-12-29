@@ -7,7 +7,7 @@ namespace ozmutluweb.Models.Siniflar
     {
         [Key]
         public int ID { get; set; }
-        public string Baslik { get; set; }
-        public string Aciklama { get; set; }
+        public string? Baslik { get; set; }
+        public string? Aciklama { get; set; }
     }
 }
