@@ -1,5 +1,4 @@
-﻿@using ozmutluweb.Models.Siniflar;
-@model List<Urunler>
+﻿@model ozmutluweb.Models.Siniflar.UrunYorum 
 
 @{
     ViewData["Title"] = "Index";
@@ -44,10 +43,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <div class="col-md-8 single-main">
                 <div class="single-grid">
-                    @foreach (var x in Model)
+                    @foreach (var x in Model.Deger1)
                     {
                         <img src="@x.UrunImage" alt="" style="margin-bottom:20px"/>
-                        <a href="/Urunler/UrunDetay/@x.ID">@x.Baslik</a>
+                        <a href="/Urunler/UrunlerDetay/@x.ID">@x.Baslik</a>
                         <p>@x.Aciklama</p>
 
                         <br />
@@ -62,13 +61,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="col-md-4 side-content">
                 <div class="recent">
                     <h3>Son Eklenenler</h3>
+                    @foreach(var y in Model.Deger3){
                     <ul>
-                        <li><a href="#">Aliquam tincidunt mauris</a></li>
-                        <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
-                        <li><a href="#">Nunc dignissim risus consecu</a></li>
-                        <li><a href="#">Cras ornare tristiqu</a></li>
+                        <li><a href="/Urunler/UrunlerDetay/@y.ID">@y.Baslik</a></li>
                     </ul>
+                    }
                 </div>
+
                 <div class="comments">
                     <h3>Son Yorumlar</h3>
                     <ul>
