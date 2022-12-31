@@ -1,0 +1,24 @@
+﻿@model ozmutluweb.Models.Siniflar.Urunler
+@{
+    ViewData["Title"] = "YeniUrun";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Ürün Ekleme</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x=>x.Baslik)
+    @Html.TextBoxFor(x=>x.Baslik, new{@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Tarih)
+    @Html.TextBoxFor(x=>x.Tarih, new{@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.UrunImage)
+    @Html.TextBoxFor(x=>x.UrunImage, new{@class="form-control"})
+    <br />
+    @Html.LabelFor(x=>x.Aciklama)
+    @Html.TextAreaFor(x=>x.Aciklama, new{@class="form-control"})
+    <br />
+    <button class="btn btn-primary">Urun Ekle</button>
+</form>
+
