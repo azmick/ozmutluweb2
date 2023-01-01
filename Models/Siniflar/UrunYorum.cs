@@ -1,4 +1,7 @@
-﻿namespace ozmutluweb.Models.Siniflar
+﻿using Microsoft.AspNetCore.Mvc.ViewFeatures;
+
+
+namespace ozmutluweb.Models.Siniflar
 {
 	public class UrunYorum //Hangi tablolarımdan veri çekiceksem, işlem yapıcaksam o tabloları enumerable olarak topladık
 	{

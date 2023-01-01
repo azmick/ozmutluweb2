@@ -1,5 +1,6 @@
 ﻿@model ozmutluweb.Models.Siniflar.UrunYorum;
 
+
 @{
     ViewData["Title"] = "UrunlerDetay";
     Layout = "~/Views/Shared/_OzmutluLayout.cshtml";
@@ -56,17 +57,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					</li>
 				</ul>
 				}
-
-				<div class="content-form">
-					<h3>Bir Yorum Bırakın</h3>
-					<form>
-						<input type="text" placeholder="Kullanıcı Adı" required />
-						<input type="text" placeholder="Mail Adresi" required />
-						<input type="text" placeholder="Yorum" required />
-						<textarea placeholder="Message"></textarea>
-						<input type="submit" value="GÖNDER" />
-					</form>
-				</div>
+				@Html.Partial("YorumYap","Urunler")
 			</div>
 
 			<br />

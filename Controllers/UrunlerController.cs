@@ -16,11 +16,26 @@ namespace ozmutluweb.Controllers
 		}
 		public IActionResult UrunlerDetay(int id)
 		{
-			//var blogbul = c.Urunlers.Where(x => x.ID == id).ToList();
-			uy.Deger1 = c.Urunlers.Where(x => x.ID == id).ToList();
+            
+            //var blogbul = c.Urunlers.Where(x => x.ID == id).ToList();
+            uy.Deger1 = c.Urunlers.Where(x => x.ID == id).ToList();
 			uy.Deger2 = c.Yorumlars.Where(x => x.Urunlerid == id).ToList() ;
 			return View(uy);
-
 		}
+		[HttpGet]
+		public PartialViewResult YorumYap(int id) 
+		{
+            ViewBag.deger = id;
+            return PartialView();
+		}
+
+		[HttpPost]
+		public PartialViewResult YorumYap(Yorumlar y) 
+		{
+			c.Yorumlars.Add(y);
+			c.SaveChanges();
+			return PartialView();
+		}
+
 	}
 }
