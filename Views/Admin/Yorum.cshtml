@@ -1,0 +1,27 @@
+﻿@using ozmutluweb.Models.Siniflar
+@model List<Yorumlars>
+@{
+    ViewData["Title"] = "Yorum";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Yorum Listesi</h1>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th> ID </th>
+        <th> YORUM </th>
+        <th> SİL </th>
+        <th> GÜNCELLE </th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.Yorum</td>
+            <td><a href="/Admin/YorumSil/@x.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Admin/YorumGetir/@x.ID" class="btn btn-success">Guncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Admin/YeniYorum/" class="btn btn-primary">Yeni Yorum</a>

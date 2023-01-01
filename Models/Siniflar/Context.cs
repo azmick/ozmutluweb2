@@ -20,7 +20,7 @@ namespace ozmutluweb.Models.Siniflar
         public DbSet<Urunler> Urunlers { get; set; }
         public DbSet<Hakkımızda> Hakkimizdas { get; set; }
         public DbSet<Iletisim> Iletisims { get; set; }
-        public DbSet<Yorumlar> Yorumlars { get; set; }
+        public DbSet<Yorumlars> Yorumlars { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

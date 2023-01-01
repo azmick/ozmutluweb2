@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ozmutluweb.Models.Siniflar
 {
-    public class Yorumlar
+    public class Yorumlars
     {
         [Key]
         public int ID { get; set; }

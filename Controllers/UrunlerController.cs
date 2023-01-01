@@ -11,7 +11,7 @@ namespace ozmutluweb.Controllers
 		{
 			//var ürünler = c.Urunlers.ToList();
 			uy.Deger1 = c.Urunlers.ToList();
-			uy.Deger3 = c.Urunlers.OrderByDescending(x=>x.ID).Take(2).ToList();
+			uy.Deger3 = c.Urunlers.OrderByDescending(x=>x.ID).Take(3).ToList();
 			return View(uy);
 		}
 		public IActionResult UrunlerDetay(int id)
@@ -23,14 +23,13 @@ namespace ozmutluweb.Controllers
 			return View(uy);
 		}
 		[HttpGet]
-		public PartialViewResult YorumYap(int id) 
-		{
-            ViewBag.deger = id;
+		public PartialViewResult YorumYap() 
+		{ 
             return PartialView();
 		}
 
 		[HttpPost]
-		public PartialViewResult YorumYap(Yorumlar y) 
+		public PartialViewResult YorumYap(Yorumlars y) 
 		{
 			c.Yorumlars.Add(y);
 			c.SaveChanges();

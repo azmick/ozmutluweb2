@@ -6,7 +6,8 @@ namespace ozmutluweb.Controllers
     public class OzmutluController : Controller
     {
         Context c = new Context();
-        public IActionResult Index()
+		
+		public IActionResult Index()
         {
             var degerler = c.Urunlers.ToList();
             return View(degerler);
@@ -16,5 +17,5 @@ namespace ozmutluweb.Controllers
         {
             return View();
         }
-    }
+	}
 }
